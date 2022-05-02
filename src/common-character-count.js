@@ -19,12 +19,15 @@ function getCommonCharacterCount( s1, s2 ) {
       for(let j = 0; j < arr2.length; j++){
         if(arr1[i] === arr2[j]){
           count += 1;
-          break;
+          let index2 = arr2.indexOf(arr2[j]);
+          
+          arr1.splice(index2, 1)
+          arr2.splice(index2, 1)
         }
       }
       
     }
-  console.log(count);
+  return (count);
 }
 
 module.exports = {
